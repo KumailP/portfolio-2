@@ -1,41 +1,71 @@
 .welcome {
+    display: none;
     color: #f3f3f3;
-    background-color: #0b1722;
-    animation-name: color;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
     width: 100%;
     min-height: 100vh;
     font-family: 'Raleway', sans-serif;
     text-align: center;
     position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
 }
 
-@keyframes color {
-    0% {
-      background-color: #0b1722;
-    }
-    50% {
-        background-color: #17191b;
-    }
-    100% {
-      background-color: #0b1722;
-    }
+  @-webkit-keyframes animatebottom {
+    from { bottom:-150px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-50px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+
+  @keyframes animateTopImg {
+      from{ top:-50px; opacity: 0 }
+      to{top: 0; opacity: 1}
+  }
+
+  @-webkit-keyframes animateTopImg {
+    from{ top:-50px; opacity: 0 }
+    to{top: 0; opacity: 1}
 }
 
-.welcome img {
-    height: 125px;
+#selfpic {
+    display: none;
+    background: url("/images/self.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.5s;
+    height: 170px;
+    width: 250px;
+    margin: 0 auto;
+    -webkit-animation-name: animateTopImg;
+    -webkit-animation-duration: 1s;
+    animation-name: animateTopImg;
+    animation-duration: 1s
+}
+
+#selfpic:hover {
+    background: url("/images/self2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.5s;
 }
 
 .welcome .text {    
     position: absolute;
-    top: 10%;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     width: 90%;
-    height: 40%;
+    height: 50%;
     margin: auto;
+    text-transform: lowercase;
 }
 
 .welcome h1 {
@@ -68,7 +98,7 @@
 .welcome .fa-arrow:hover {
     color: white;
     transition: 0.5s;
-    transform: translateY(5px);
+    transform: translateY(3px);
 }
 
 .welcome .social {
@@ -83,13 +113,13 @@
     border: 0px;
     font-size: 1.5em;
     padding: 10px 40px;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 
 .welcome .social button:hover {
     background-color: white;
-    transition: 1s;
+    transition: 0.5s;
     transform: translateY(1px);
 }
 
@@ -103,4 +133,23 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     border-left: 1px solid #17191b;
+}
+
+@media only screen and (max-width: 780px) {
+    .welcome .social button{
+        border-radius: 0px !important;
+        width: 100%;
+        border: 0px !important;
+        border-top: 1px solid #17191b !important;
+    }
+    .welcome .social button:hover {
+        transition: 1s;
+        transform: translateY(0px);
+    }
+    .welcome .text {
+        height: 85%;
+    }
+    .welcome .text h1 {
+        font-size: 3em;
+    }
 }

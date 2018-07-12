@@ -1,22 +1,24 @@
 import React, { Component } from "react";
 import "./App.css";
 import Welcome from "./components/Welcome";
+import Projects from "./components/Projects";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.loader = document.getElementById("loader");
+  }
   componentDidMount() {
-    let loader = document.getElementById("loader");
     setTimeout(() => {
-      loader.classList.add("loader-show");
-      setTimeout(() => {
-        loader.remove();
-      }, 500);
-    }, 500);
+      document.getElementById("welcome").style.display = "block";
+      this.loader.style.display = "none";
+    }, 1000);
   }
   render() {
     return (
       <div>
         <Welcome />
-        {/* <p>Sup</p> */}
+        <Projects />
       </div>
     );
   }

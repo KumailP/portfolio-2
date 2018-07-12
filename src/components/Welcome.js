@@ -1,24 +1,38 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown, faAddressCard } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./styles/Welcome.css";
 
-export default () => {
-  return (
-    <div className="welcome">
-      <div className="text">
-        <img src="/images/avatar.png" alt="Kumail" />
-        <h1>
-          Hello, I'm <span>Kumail</span>
-        </h1>
-        <h2>I like web development and machine learning</h2>
-        <div className="social">
-          <button type="button">GitHub</button>
-          <button type="button">Résumé</button>
-          <button type="button">LinkedIn</button>
+export default class Welcome extends React.Component {
+  componentDidMount() {
+    setTimeout(() => {
+      document.getElementById("selfpic").style.display = "block";
+    }, 1000);
+  }
+  render() {
+    return (
+      <div className="welcome" id="welcome">
+        <div className="text">
+          <div id="selfpic" />
+          <h1>
+            Hello, I'm <span>Kumail</span>
+          </h1>
+          <h2>I like web development and machine learning</h2>
+          <div className="social">
+            <button type="button">
+              <FontAwesomeIcon icon={faGithub} />
+            </button>
+            <button type="button">
+              <FontAwesomeIcon icon={faAddressCard} />
+            </button>
+            <button type="button">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </button>
+          </div>
+          <FontAwesomeIcon icon={faCaretDown} className="fa-arrow" />
         </div>
-        <FontAwesomeIcon icon={faCaretDown} className="fa-arrow" />
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
