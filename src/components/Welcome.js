@@ -5,11 +5,6 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./styles/Welcome.css";
 
 export default class Welcome extends React.Component {
-  componentDidMount() {
-    setTimeout(() => {
-      document.getElementById("selfpic").style.display = "block";
-    }, 1000);
-  }
   render() {
     return (
       <div className="welcome" id="welcome">

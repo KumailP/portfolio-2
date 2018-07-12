@@ -9,10 +9,10 @@ class App extends Component {
     this.loader = document.getElementById("loader");
   }
   componentDidMount() {
-    setTimeout(() => {
-      document.getElementById("welcome").style.display = "block";
-      this.loader.style.display = "none";
-    }, 1000);
+    // setTimeout(() => {
+    document.getElementById("welcome").style.display = "block";
+    this.loader.style.display = "none";
+    // }, 1000);
   }
   render() {
     return (

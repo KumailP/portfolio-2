@@ -3,7 +3,6 @@
     color: #f3f3f3;
     width: 100%;
     min-height: 100vh;
-    font-family: 'Raleway', sans-serif;
     text-align: center;
     position: relative;
     -webkit-animation-name: animatebottom;
@@ -33,7 +32,6 @@
 }
 
 #selfpic {
-    display: none;
     background: url("/images/self.png");
     background-position: center;
     background-repeat: no-repeat;
