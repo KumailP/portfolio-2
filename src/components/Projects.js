@@ -42,7 +42,7 @@ const projects = [
 
 export default () => {
   return (
-    <div className="projects">
+    <div className="projects" id="projects">
       <h1>Projects</h1>
       <div className="projects-list">
         {projects.map((project, i) => {

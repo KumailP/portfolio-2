@@ -32,7 +32,7 @@
     min-width: 500px;
     max-width: 500px;
 }
-
+/* 
 @media only screen and (min-width: 1000px) {
     .projects-list:hover {
         transform: translate3d(-32.5px, 0, 0);
@@ -54,9 +54,18 @@
         -webkit-transform: translate3d(65px, 0, 0);
                 transform: translate3d(65px, 0, 0);
       }
+} */
+.projects-list:hover .project:hover {
+    opacity: 1;
+    transform: scale(1.1,1.1);
+    transition: all 0.3s ease-in-out;
+    z-index: 5;
 }
 
 
+.projects-list:hover .project {
+    opacity: 0.3;
+}
 
 .project-text {
     z-index: 2;

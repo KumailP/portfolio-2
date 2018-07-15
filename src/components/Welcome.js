@@ -25,7 +25,9 @@ export default class Welcome extends React.Component {
               <FontAwesomeIcon icon={faLinkedin} />
             </button>
           </div>
-          <FontAwesomeIcon icon={faCaretDown} className="fa-arrow" />
+          <a data-scroll href="#projects">
+            <FontAwesomeIcon icon={faCaretDown} className="fa-arrow" />
+          </a>
         </div>
       </div>
     );
