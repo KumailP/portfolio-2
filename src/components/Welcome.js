@@ -9,7 +9,6 @@ export default class Welcome extends React.Component {
     return (
       <div className="welcome" id="welcome">
         <div className="text">
-          <div id="selfpic" />
           <h1>
             Hello, I'm <span>Kumail</span>
           </h1>

@@ -31,28 +31,6 @@
     to{top: 0; opacity: 1}
 }
 
-#selfpic {
-    background: url("/images/self.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    transition: all 0.2s ease-in-out;
-    height: 170px;
-    width: 250px;
-    margin: 0 auto;
-    -webkit-animation-name: animateTopImg;
-    -webkit-animation-duration: 1s;
-    animation-name: animateTopImg;
-    animation-duration: 1s
-}
-
-#selfpic:hover {
-    background: url("/images/self2.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    transition: all 0.2s ease-in-out;
-}
 
 .welcome .text {    
     position: absolute;
@@ -61,7 +39,7 @@
     left: 0;
     right: 0;
     width: 90%;
-    height: 50%;
+    height: 30%;
     margin: auto;
     text-transform: lowercase;
 }

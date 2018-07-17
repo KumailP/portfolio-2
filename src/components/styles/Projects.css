@@ -29,7 +29,7 @@
     overflow: hidden;
     margin: 5px;
     transition: all 0.3s ease-in-out;
-    min-width: 500px;
+    min-width: 300px;
     max-width: 500px;
 }
 /* 
@@ -63,7 +63,7 @@
 }
 
 
-.projects-list:hover .project {
+.projects-list:hover .project:not(:hover) {
     opacity: 0.3;
 }
 

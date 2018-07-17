@@ -2,3 +2,49 @@
     color: white;
     text-align: center;
 }
+
+.about {
+    margin-bottom: 200px;
+}
+
+#selfpic {
+    background: url("/images/self.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.2s ease-in-out;
+    height: 170px;
+    width: 100%;
+    -webkit-animation-name: animateTopImg;
+    -webkit-animation-duration: 1s;
+    animation-name: animateTopImg;
+    animation-duration: 1s
+}
+
+#selfpic:hover {
+    background: url("/images/self2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.about-card .card-inner {
+    background-color: #e7e7e7;
+    width: 100%;
+}
+
+.about-card {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-card h1 {
+    color: black;
+}
+
+.about-card .card-pic {
+    min-width: 200px;
+}
